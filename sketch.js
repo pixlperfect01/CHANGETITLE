@@ -27,10 +27,11 @@ function draw() {
   let h2 = h.value();
   let final = "<img href=" + link2 + " width=" + w2 + "px" + ">";
   if(drop.value() === 'text'){
-    a.html('text');
+    link.attribute('placeholder',drop.value());
   }else{
-    a.html(drop.value()+' link');
+    link.attribute('placeholder',drop.value()+' link');
   }
+  a.html(drop.value());
   b.html(link2);
   c.html(" width=");
   d.html(w2);
