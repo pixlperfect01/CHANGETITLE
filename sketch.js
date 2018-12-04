@@ -7,7 +7,6 @@ function setup(){
   drop.option('audio');
   drop.option('video');
   drop.option('image');
-  drop.option('text');
 }
 function draw() {
   background(255);
@@ -26,11 +25,7 @@ function draw() {
   let w2 = w.value();
   let h2 = h.value();
   let final = "<img href=" + link2 + " width=" + w2 + "px" + ">";
-  if(drop.value() === 'text'){
-    link.attribute('placeholder',drop.value());
-  }else{
-    link.attribute('placeholder',drop.value()+' link');
-  }
+  link.attribute('placeholder',drop.value()+' link');
   a.html(drop.value());
   b.html(link2);
   c.html(" width=");
