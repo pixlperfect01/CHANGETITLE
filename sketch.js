@@ -4,12 +4,13 @@ let drop;
 function setup(){
   noCanvas();
   drop = select("#drop");
+  drop.option('hi');
 }
 function draw() {
   background(255);
   let link = select("#link");
-	let w = select("#w");
-	let h = select("#h");
+  let w = select("#w");
+  let h = select("#h");
   let a = select("#1");
   let b = select("#2");
   let c = select("#3");
