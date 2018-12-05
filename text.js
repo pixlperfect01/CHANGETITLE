@@ -180,4 +180,6 @@ if(underline.checked()){
   }
   tt.html(tt.html()+'&gt;');
   ttc.html('&lt;/'+radio.value()+'&gt;');
+  if(radio.value() !== 'a'||!downloadbox.checked())
+    downloaddiv.hide();
 }
