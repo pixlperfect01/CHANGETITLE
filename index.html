@@ -10,54 +10,57 @@
     <script type="text/javascript" src="text.js"></script>
 	  <script>
 			let iframe;
+		  let iframef;
 			function setup(){
-				iframe = select("#iframe");
+				iframe = select("#iframet");
+        iframef = select("#iframe");
 			}
 			function draw(){
-				iframe.attribute('srcdoc',tt.html());
+				iframe.html(tt.html());
 				if (strong.checked()){
-					iframe.attribute('srcdoc',iframe.attribute('srcdoc')+st.html);
+					iframe.html(iframe.html()+st.html());
 				}
 				if (subbox.checked()){
-					iframe.attribute('srcdoc',iframe.attribute('srcdoc')+sub.html);
+					iframe.html(iframe.ahtml()+sub.html());
 				}
 				if (supbox.checked()){
-					iframe.attribute('srcdoc',iframe.attribute('srcdoc')+sup.html);
+					iframe.html(iframe.html()+sup.html());
 				}
 				if (smallbox.checked()){
-					iframe.attribute('srcdoc',iframe.attribute('srcdoc')+small.html);
+					iframe.html(iframe.html()+small.html());
 				}
 				if (mark.checked()){
-					iframe.attribute('srcdoc',iframe.attribute('srcdoc')+mk.html);
+					iframe.html(iframe.html()+mk.html());
 				}
 				if (i.checked()){
-					iframe.attribute('srcdoc',iframe.attribute('srcdoc')+it.html);
+					iframe.html(iframe.html()+it.html());
 				}
 				if (underline.checked()){
-					iframe.attribute('srcdoc',iframe.attribute('srcdoc')+ul.html);
+					iframe.html(iframe.html()+ul.html());
 				}
-				iframe.attribute('srcdoc',iframe.attribute('srcdoc')+tc.html);
+				iframe.html(iframe.html()+tc.html());
 				if (strong.checked()){
-					iframe.attribute('srcdoc',iframe.attribute('srcdoc')+stc.html);
+					iframe.html(iframe.html()+stc.html());
 				}
 				if (subbox.checked()){
-					iframe.attribute('srcdoc',iframe.attribute('srcdoc')+subc.html);
+					iframe.html(iframe.html()+subc.html());
 				}
 				if (supbox.checked()){
-					iframe.attribute('srcdoc',iframe.attribute('srcdoc')+supc.html);
+					iframe.html(iframe.html()+supc.html());
 				}
 				if (smallbox.checked()){
-					iframe.attribute('srcdoc',iframe.attribute('srcdoc')+smallc.html);
+					iframe.html(iframe.html()+smallc.html());
 				}
 				if (mark.checked()){
-					iframe.attribute('srcdoc',iframe.attribute('srcdoc')+mkc.html);
+					iframe.html(iframe.html()+mkc.html());
 				}
 				if (i.checked()){
-					iframe.attribute('srcdoc',iframe.attribute('srcdoc')+itc.html);
+					iframe.html(iframe.html()+itc.html());
 				}
 				if (underline.checked()){
-					iframe.attribute('srcdoc',iframe.attribute('srcdoc')+ulc.html);
+					iframe.html(iframe.html()+ulc.html());
 				}
+        iframef.attribute("srcdoc"
 		</script>
 
   </head>
@@ -167,5 +170,6 @@ working on it
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="downloadinpt" placeholder="download">
     </div>
 	  <iframe srcdoc=""></iframe>
+    <a id="iframet"hidden></a>
   </body>
 </html>
