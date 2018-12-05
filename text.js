@@ -37,8 +37,26 @@ let fontclr;
 let fntclrbox;
 let fontclrdiv;
 let fntclrinpt;
+let sub;
+let sup;
+let sml;
+let subc;
+let supc;
+let smlc;
+let subbox;
+let supbox;
+let smallbox;
 function setup(){
   noCanvas();
+sub = select("#sub");
+sup = select("#sup");
+sml = select("#sml");
+subc = select("#subc");
+supc = select("#supc");
+smlc = select("#smlc");
+subbox = select("#subbox");
+supbox = select("#supbox");
+smallbox = select("#smallbox");
   fontclr = select("#fontclr");
   fntclrbox = select("#fntclrbox");
   fontclrdiv = select("#fontclrdiv");
@@ -155,7 +173,7 @@ function draw() {
   }else{
     
   }
-    if(strong.checked()){
+  if(strong.checked()){
     st.show();
     stc.show();
   }else{
@@ -182,6 +200,27 @@ if(underline.checked()){
   }else{
     ul.hide();
     ulc.hide();
+  }
+  if(subbox.checked()){
+    sub.show();
+    subc.show();
+  }else{
+    sub.hide();
+    subc.hide();
+  }
+  if(supbox.checked()){
+    sup.show();
+    supc.show();
+  }else{
+    sup.hide();
+    supc.hide();
+  }
+  if(smallbox.checked()){
+    sml.show();
+    smlc.show();
+  }else{
+    sml.hide();
+    smlc.hide();
   }
   if(radio.value() === 'a'){
     hrefdiv.show();
@@ -234,4 +273,3 @@ if(underline.checked()){
   if(radio.value() !== 'a'||!downloadbox.checked())
     downloaddiv.hide();
 }
-  
