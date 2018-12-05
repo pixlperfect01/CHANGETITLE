@@ -6,16 +6,19 @@ let tt;
 let ttc;
 let radio;
 let product;
-let finalproduct;
-let txt;
-let txt2;
+  let finalproduct;
+  let txt;
+  let txt2;
 let strong;
-let mark;
-let i;
-let underline;
+  let mark;
+  let i;
+  let underline;
 let idbox;
 let idid;
 let iddiv;
+let stylebox;
+let stylestyle;
+let stylediv;
 let classbox;
 let classdiv;
 let classclass;
@@ -30,8 +33,16 @@ let fontsize;
 let fntsizbox;
 let fontsizediv;
 let fntsizinpt;
+let fontclr;
+let fntclrbox;
+let fontclrdiv;
+let fntclrinpt;
 function setup(){
   noCanvas();
+  fontclr = select("#fontclr");
+  fntclrbox = select("#fntclrbox");
+  fontclrdiv = select("#fontclrdiv");
+  fntclrinpt = select("#fntclrinpt");
   fontsize = select("#fontsize");
   fntsizbox = select("#fntsizbox");
   fontsizediv = select("#fontsizediv");
@@ -45,6 +56,9 @@ function setup(){
   iddiv = select("#iddiv");
   idbox = select("#idbox");
   idid = select("#idid");
+  stylediv = select("#stylediv");
+  stylebox = select("#stylebox");
+  stylestyle = select("#stylestyle");
   classdiv = select("#classdiv");
   classbox = select("#classbox");
   classclass = select("#classclass");
@@ -109,28 +123,57 @@ function draw() {
   }else{
     tt.html('&lt;'+radio.value());
   }
-  if(strong.checked()){
+  if(radio.value() === 'font'){
+    fontsize.show();
+    fontclr.show();
+    if(fntsizbox.checked()){
+      fontsizediv.show();
+    }else{
+      fontsizediv.hide();
+    }
+    if(fntclrbox.checked()){
+      fontclrdiv.show();
+    }else{
+      fontclrdiv.hide();
+    }
+  }else{
+    fontsize.hide();
+    fontsizediv.hide();
+    fontclr.hide();
+    fontclrdiv.hide();
+  }
+  if(radio.value() === 'font' && fntsizbox.checked()){
+    tt.html('&lt;font size=&quot;'+fntsizinpt.value()+'&quot;');
+  }else{
+    tt.html('&lt;'+radio.value());
+  }
+  if(radio.value() === 'font' && fntclrbox.checked()){
+    tt.html(tt.html()+' color=&quot;'+fntclrinpt.value()+'&quot;');
+  }else{
+    
+  }
+    if(strong.checked()){
     st.show();
     stc.show();
   }else{
     st.hide();
     stc.hide();
   }
-  if(mark.checked()){
+if(mark.checked()){
     mk.show();
     mkc.show();
   }else{
     mk.hide();
     mkc.hide();
   }
-  if(i.checked()){
+if(i.checked()){
     it.show();
     itc.show();
   }else{
     it.hide();
     itc.hide();
   }
-  if(underline.checked()){
+if(underline.checked()){
     ul.show();
     ulc.show();
   }else{
@@ -171,6 +214,12 @@ function draw() {
   }else{
     iddiv.hide();
   }
+  if(stylebox.checked()){
+    stylediv.show();
+    tt.html(tt.html()+' style=&quot;'+stylestyle.value()+'&quot');
+  }else{
+    stylediv.hide();
+  }
   if(classbox.checked()){
     classdiv.show();
     tt.html(tt.html()+' class=&quot;'+classclass.value()+'&quot');
@@ -182,3 +231,4 @@ function draw() {
   if(radio.value() !== 'a'||!downloadbox.checked())
     downloaddiv.hide();
 }
+  
