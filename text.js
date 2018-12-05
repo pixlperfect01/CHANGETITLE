@@ -6,13 +6,13 @@ let tt;
 let ttc;
 let radio;
 let product;
-  let finalproduct;
-  let txt;
-  let txt2;
+let finalproduct;
+let txt;
+let txt2;
 let strong;
-  let mark;
-  let i;
-  let underline;
+let mark;
+let i;
+let underline;
 let idbox;
 let idid;
 let iddiv;
@@ -109,28 +109,28 @@ function draw() {
   }else{
     tt.html('&lt;'+radio.value());
   }
-    if(strong.checked()){
+  if(strong.checked()){
     st.show();
     stc.show();
   }else{
     st.hide();
     stc.hide();
   }
-if(mark.checked()){
+  if(mark.checked()){
     mk.show();
     mkc.show();
   }else{
     mk.hide();
     mkc.hide();
   }
-if(i.checked()){
+  if(i.checked()){
     it.show();
     itc.show();
   }else{
     it.hide();
     itc.hide();
   }
-if(underline.checked()){
+  if(underline.checked()){
     ul.show();
     ulc.show();
   }else{
@@ -153,7 +153,6 @@ if(underline.checked()){
     if(radio.value() === 'a')
     tt.html('&lt;'+radio.value());
     ttc.html('&lt;/'+radio.value()+'&gt;');
-    
   }
   if(radio.value() === 'a' && downloadbox.checked() & hrefbox.checked()){
     downloaddiv.show();
