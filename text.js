@@ -16,11 +16,38 @@ let strong;
 let idbox;
 let idid;
 let iddiv;
+let classbox;
+let classdiv;
+let classclass;
+let hyperselect;
+let downloadbox;
+let downloaddiv;
+let downloadinpt;
+let downdiv;
+let hrefbox;
+let hrefdiv;
+let fontsize;
+let fntsizbox;
+let fontsizediv;
+let fntsizinpt;
 function setup(){
   noCanvas();
+  fontsize = select("#fontsize");
+  fntsizbox = select("#fntsizbox");
+  fontsizediv = select("#fontsizediv");
+  fntsizinpt = select("#fntsizinpt");
+  hrefbox = select("#hrefbox");
+  hrefdiv = select("#hrefdiv");
+  downdiv = select("#downdiv");
+  downloadbox = select("#downloadbox");
+  downloaddiv = select("#downloaddiv");
+  downloadinpt = select("#downloadinpt");
   iddiv = select("#iddiv");
   idbox = select("#idbox");
   idid = select("#idid");
+  classdiv = select("#classdiv");
+  classbox = select("#classbox");
+  classclass = select("#classclass");
   strong = select("#strong");
   mark = select("#mark");
   i = select("#i");
@@ -35,6 +62,7 @@ function setup(){
   radio.option('heading 1','h1');
   radio.option('heading 2','h2');
   radio.option('heading 3','h3');
+  radio.option('font','font');
   p = select("#p");
   atag = select("#a");
   h1 = select("#h1");
@@ -65,7 +93,23 @@ function draw() {
   let mark = select("#mark");
   let i = select("#i");
   let underline = select("#underline");
-	if(strong.checked()){
+  if(radio.value() === 'font'){
+    fontsize.show();
+    if(fntsizbox.checked()){
+      fontsizediv.show();
+    }else{
+      fontsizediv.hide();
+    }
+  }else{
+    fontsize.hide();
+    fontsizediv.hide();
+  }
+  if(radio.value() === 'font' && fntsizbox.checked()){
+    tt.html('&lt;font size=&quot;'+fntsizinpt.value()+'&quot;');
+  }else{
+    tt.html('&lt;'+radio.value());
+  }
+    if(strong.checked()){
     st.show();
     stc.show();
   }else{
@@ -93,13 +137,31 @@ if(underline.checked()){
     ul.hide();
     ulc.hide();
   }
-  
   if(radio.value() === 'a'){
+    hrefdiv.show();
+  }else{
+    hrefdiv.hide();
+  }
+  if(radio.value() === 'a' && hrefbox.checked()){
     href.show();
+    downdiv.show();
     tt.html('&lt;'+radio.value()+' href=&quot;'+hyper.value()+'&quot;');
     ttc.html('&lt;/'+radio.value()+'&gt;');
   }else{
     href.hide();
+    downdiv.hide();
+    if(radio.value() === 'a')
+    tt.html('&lt;'+radio.value());
+    ttc.html('&lt;/'+radio.value()+'&gt;');
+    
+  }
+  if(radio.value() === 'a' && downloadbox.checked() & hrefbox.checked()){
+    downloaddiv.show();
+    tt.html('&lt;'+radio.value()+' href=&quot;'+hyper.value()+'&quot; download=&quot;'+downloadinpt.value()+'&quot;');
+    ttc.html('&lt;/'+radio.value()+'&gt;');
+  }else if(!hrefbox.checked()){
+    downloaddiv.hide();
+    if(radio.value() === 'a')
     tt.html('&lt;'+radio.value());
     ttc.html('&lt;/'+radio.value()+'&gt;');
   }
@@ -110,28 +172,12 @@ if(underline.checked()){
   }else{
     iddiv.hide();
   }
+  if(classbox.checked()){
+    classdiv.show();
+    tt.html(tt.html()+' class=&quot;'+classclass.value()+'&quot');
+  }else{
+    classdiv.hide();
+  }
   tt.html(tt.html()+'&gt;');
-}
-function temp(){
-  product.html('');
-  product.html('<'+radio.value()+'>');
-  if(strong.checked())
-    product.html(product.html()+'<strong>');
-  if(mark.checked())
-    product.html(product.html()+'<mark>');
-  if(i.checked())
-    product.html(product.html()+'<i>');
-  if(underline.checked())
-    product.html(product.html()+'<u>');
-  product.html(product.html()+txt.value());
-  if(strong.checked())
-    product.html(product.html()+'</strong>');
-  if(mark.checked())
-    product.html(product.html()+'</mark>');
-  if(i.checked())
-    product.html(product.html()+'</i>');
-  if(underline.checked())
-    product.html(product.html()+'</u>');
-  product.html('</'+radio.value()+'>');
-  finalproduct.html(product.html());
+  ttc.html('&lt;/'+radio.value()+'&gt;');
 }
