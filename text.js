@@ -76,6 +76,9 @@ function setup(){
   radio.option('heading 1','h1');
   radio.option('heading 2','h2');
   radio.option('heading 3','h3');
+  radio.option('heading 4','h4');
+  radio.option('heading 5','h5');
+  radio.option('heading 6','h6');
   radio.option('font','font');
   p = select("#p");
   atag = select("#a");
