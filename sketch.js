@@ -4,9 +4,9 @@ let drop;
 function setup(){
   noCanvas();
   drop = select("#drop");
-  drop.option('audio');
-  drop.option('video');
-  drop.option('image');
+  drop.option('audio','audio');
+  drop.option('video','video');
+  drop.option('image','image');
 }
 function draw() {
   background(255);
