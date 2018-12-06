@@ -27,14 +27,6 @@ var extraStuff = ' ';
 // I don't want this stuff to appear in the box at the top because I feel it's likely to be distracting.
 
 var old = '';
-         
-function init()
-{
-  window.editbox.document.write(editboxHTML);
-  window.editbox.document.close();
-  window.editbox.document.f.ta.value(defaultStuff);
-  update();
-}
 
 function update()
 {
@@ -56,7 +48,7 @@ function update()
 </script>
 </head>
 
-<frameset resizable="yes" rows="50%,*" onload="init();">
+<frameset>
   <!-- about:blank confuses opera, so use javascript: URLs instead -->
   <frame name="editbox" src="javascript:'';">
   <frame name="dynamicframe" src="javascript:'';">
