@@ -49,6 +49,7 @@ let smlc;
 let subbox;
 let supbox;
 let smallbox;
+let title;
 function setup(){
   noCanvas();
 sub = select("#sub");
@@ -147,8 +148,10 @@ function draw() {
   }
   if(radio.value() === 'font' && fntsizbox.checked()){
     tt.html('&lt;font size=&quot;'+fntsizinpt.value()+'&quot;');
+    title = '<font size="'+fntsizinpt.value()+'"';
   }else{
     tt.html('&lt;'+radio.value());
+    title = '&lt;'+radio.value();
   }
   if(radio.value() === 'font'){
     fontsize.show();
@@ -169,13 +172,9 @@ function draw() {
     fontclr.hide();
     fontclrdiv.hide();
   }
-  if(radio.value() === 'font' && fntsizbox.checked()){
-    tt.html('&lt;font size=&quot;'+fntsizinpt.value()+'&quot;');
-  }else{
-    tt.html('&lt;'+radio.value());
-  }
   if(radio.value() === 'font' && fntclrbox.checked()){
     tt.html(tt.html()+' color=&quot;'+fntclrinpt.value()+'&quot;');
+    title = title+' color="'+fntclrinpt.value()+'"';
   }else{
     
   }
@@ -237,93 +236,102 @@ if(underline.checked()){
     href.show();
     downdiv.show();
     tt.html('&lt;'+radio.value()+' href=&quot;'+hyper.value()+'&quot;');
+    title = '<'+radio.value()+' href="'+hyper.value()+'"';
     ttc.html('&lt;/'+radio.value()+'&gt;');
   }else{
     href.hide();
     downdiv.hide();
     if(radio.value() === 'a')
     tt.html('&lt;'+radio.value());
+    title = '<'+radio.value();
     ttc.html('&lt;/'+radio.value()+'&gt;');
   }
   if(radio.value() === 'a' && downloadbox.checked() & hrefbox.checked()){
     downloaddiv.show();
     tt.html('&lt;'+radio.value()+' href=&quot;'+hyper.value()+'&quot; download=&quot;'+downloadinpt.value()+'&quot;');
+    title = '<'+radio.value()+' href="'+hyper.value()+'" download="'+downloadinpt.value()+'"';
     ttc.html('&lt;/'+radio.value()+'&gt;');
   }else if(!hrefbox.checked()){
     downloaddiv.hide();
     if(radio.value() === 'a')
     tt.html('&lt;'+radio.value());
+    title = '<'+radio.value();
     ttc.html('&lt;/'+radio.value()+'&gt;');
   }
   tc.html(txt2);
   if(idbox.checked()){
     iddiv.show();
     tt.html(tt.html()+' id=&quot;'+idid.value()+'&quot');
+    title = title+' id="'+idid.value()+'"';
   }else{
     iddiv.hide();
   }
   if(stylebox.checked()){
     stylediv.show();
     tt.html(tt.html()+' style=&quot;'+stylestyle.value()+'&quot');
+	  title = title+' style="'+stylestyle.value()+'"';
   }else{
     stylediv.hide();
   }
   if(classbox.checked()){
     classdiv.show();
     tt.html(tt.html()+' class=&quot;'+classclass.value()+'&quot');
+	  title = title+' class="'+classclass.value()+'"';
   }else{
     classdiv.hide();
   }
   tt.html(tt.html()+'&gt;');
+	title = title+'>';
   ttc.html('&lt;/'+radio.value()+'&gt;');
+	
   if(radio.value() !== 'a'||!downloadbox.checked())
     downloaddiv.hide();
   
-  iframe.html(tt.html());
+  iframe.html(title);
 				if (strong.checked()){
-					iframe.html(iframe.html()+st.html());
+					iframe.html(iframe.html()+'<strong>');
 				}
 				if (subbox.checked()){
-					iframe.html(iframe.ahtml()+sub.html());
+					iframe.html(iframe.html()+'<sub>');
 				}
 				if (supbox.checked()){
-					iframe.html(iframe.html()+sup.html());
+					iframe.html(iframe.html()+'<sup>');
 				}
 				if (smallbox.checked()){
-					iframe.html(iframe.html()+small.html());
+					iframe.html(iframe.html()+'<small>');
 				}
 				if (mark.checked()){
-					iframe.html(iframe.html()+mk.html());
+					iframe.html(iframe.html()+'<mark>');
 				}
 				if (i.checked()){
-					iframe.html(iframe.html()+it.html());
+					iframe.html(iframe.html()+'<i>');
 				}
 				if (underline.checked()){
-					iframe.html(iframe.html()+ul.html());
+					iframe.html(iframe.html()+'<u>');
 				}
 				iframe.html(iframe.html()+tc.html());
 				if (strong.checked()){
-					iframe.html(iframe.html()+stc.html());
+					iframe.html(iframe.html()+'</strong>');
 				}
 				if (subbox.checked()){
-					iframe.html(iframe.html()+subc.html());
+					iframe.html(iframe.html()+'</sub>');
 				}
 				if (supbox.checked()){
-					iframe.html(iframe.html()+supc.html());
+					iframe.html(iframe.html()+'</sup>');
 				}
 				if (smallbox.checked()){
-					iframe.html(iframe.html()+smallc.html());
+					iframe.html(iframe.html()+'</small>');
 				}
 				if (mark.checked()){
-					iframe.html(iframe.html()+mkc.html());
+					iframe.html(iframe.html()+'</mark>');
 				}
 				if (i.checked()){
-					iframe.html(iframe.html()+itc.html());
+					iframe.html(iframe.html()+'</i>');
 				}
 				if (underline.checked()){
-					iframe.html(iframe.html()+ulc.html());
+					iframe.html(iframe.html()+'</u>');
 				}
-	iframe.html(iframe.html()+ttc.html());
-        framef.attribute('srcdoc',iframe.html());
+	iframe.html(iframe.html()+'</'+radio.value()+'>');
+        framef.html(iframe.html());
 			}
 
