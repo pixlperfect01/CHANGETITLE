@@ -48,7 +48,7 @@ function update()
 </script>
 </head>
 
-<frameset>
+<frameset onload="update()">
   <!-- about:blank confuses opera, so use javascript: URLs instead -->
   <frame name="editbox" src="javascript:'';">
   <frame name="dynamicframe" src="javascript:'';">
