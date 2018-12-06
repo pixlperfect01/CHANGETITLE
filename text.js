@@ -1,3 +1,6 @@
+let iframe;
+		  let framef;
+
 let p;
 let atag;
 let h1;
@@ -104,6 +107,9 @@ smallbox = select("#smallbox");
   h2 = select("#h2");
   tt = select("#tt");
   ttc = select("#ttc");
+  
+  iframe = select("#iframet");
+        framef = select("#frame");
 }
 
   
@@ -272,4 +278,51 @@ if(underline.checked()){
   ttc.html('&lt;/'+radio.value()+'&gt;');
   if(radio.value() !== 'a'||!downloadbox.checked())
     downloaddiv.hide();
+  
+  iframe.html(tt.html());
+				if (strong.checked()){
+					iframe.html(iframe.html()+st.html());
+				}
+				if (subbox.checked()){
+					iframe.html(iframe.ahtml()+sub.html());
+				}
+				if (supbox.checked()){
+					iframe.html(iframe.html()+sup.html());
+				}
+				if (smallbox.checked()){
+					iframe.html(iframe.html()+small.html());
+				}
+				if (mark.checked()){
+					iframe.html(iframe.html()+mk.html());
+				}
+				if (i.checked()){
+					iframe.html(iframe.html()+it.html());
+				}
+				if (underline.checked()){
+					iframe.html(iframe.html()+ul.html());
+				}
+				iframe.html(iframe.html()+tc.html());
+				if (strong.checked()){
+					iframe.html(iframe.html()+stc.html());
+				}
+				if (subbox.checked()){
+					iframe.html(iframe.html()+subc.html());
+				}
+				if (supbox.checked()){
+					iframe.html(iframe.html()+supc.html());
+				}
+				if (smallbox.checked()){
+					iframe.html(iframe.html()+smallc.html());
+				}
+				if (mark.checked()){
+					iframe.html(iframe.html()+mkc.html());
+				}
+				if (i.checked()){
+					iframe.html(iframe.html()+itc.html());
+				}
+				if (underline.checked()){
+					iframe.html(iframe.html()+ulc.html());
+				}
+        framef.html(iframe.html());
+			}
 }
