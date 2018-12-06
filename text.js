@@ -323,6 +323,7 @@ if(underline.checked()){
 				if (underline.checked()){
 					iframe.html(iframe.html()+ulc.html());
 				}
+	iframe.html(iframe.html()+ttc.html());
         framef.html(iframe.html());
 			}
 
