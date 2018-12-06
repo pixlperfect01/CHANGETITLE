@@ -8,7 +8,6 @@ function setup(){
 }
 function draw() {
   background(255);
-  createP(drop.value());
   let link = select("#link");
   let w = select("#w");
   let h = select("#h");
