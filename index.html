@@ -10,10 +10,10 @@
     <script type="text/javascript" src="text.js"></script>
 	  <script>
 			let iframe;
-		  let iframef;
+		  let framef;
 			function setup(){
 				iframe = select("#iframet");
-        iframef = select("#iframe");
+        iframef = select("#frame");
 			}
 			function draw(){
 				iframe.html(tt.html());
@@ -60,7 +60,7 @@
 				if (underline.checked()){
 					iframe.html(iframe.html()+ulc.html());
 				}
-        iframef.attribute("srcdoc",iframe.html());
+        framef.html(iframe.html());
 			}
 		</script>
 
@@ -170,7 +170,7 @@ working on it
     <div id="downloaddiv">
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="downloadinpt" placeholder="download">
     </div>
-	  <iframe srcdoc=""></iframe>
-    <a id="iframet"hidden></a>
+    <frame id="frame"></frame>
+    <a id="iframet" hidden></a>
   </body>
 </html>
