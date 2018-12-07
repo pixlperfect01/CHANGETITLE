@@ -101,6 +101,7 @@ smallbox = select("#smallbox");
   radio.option('heading 5','h5');
   radio.option('heading 6','h6');
   radio.option('font','font');
+  radio.option('delete','del');
   p = select("#p");
   atag = select("#a");
   h1 = select("#h1");
