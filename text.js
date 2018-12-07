@@ -313,7 +313,7 @@ if(underline.checked()){
 				if (underline.checked()){
 					iframe.html(iframe.html()+'</u>');
 				}
-				if (ichecked()){
+				if (i.checked()){
 					iframe.html(iframe.html()+'</i>');
 				}
 				if (mark.checked()){
