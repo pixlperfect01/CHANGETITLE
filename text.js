@@ -332,6 +332,6 @@ if(underline.checked()){
 					iframe.value(iframe.value()+'</strong>');
 				}
 	iframe.value(iframe.value()+'</'+radio.value()+'>');
-        framef.value(iframe.value());
+        framef.html(iframe.value());
 			}
 
