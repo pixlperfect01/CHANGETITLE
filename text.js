@@ -287,51 +287,51 @@ if(underline.checked()){
   if(radio.value() !== 'a'||!downloadbox.checked())
     downloaddiv.hide();
   
-  iframe.html(title);
+  iframe.value(title);
 				if (strong.checked()){
-					iframe.html(iframe.html()+'<strong>');
+					iframe.value(iframe.value()+'<strong>');
 				}
 				if (subbox.checked()){
-					iframe.html(iframe.html()+'<sub>');
+					iframe.value(iframe.value()+'<sub>');
 				}
 				if (supbox.checked()){
-					iframe.html(iframe.html()+'<sup>');
+					iframe.value(iframe.value()+'<sup>');
 				}
 				if (smallbox.checked()){
-					iframe.html(iframe.html()+'<small>');
+					iframe.value(iframe.value()+'<small>');
 				}
 				if (mark.checked()){
-					iframe.html(iframe.html()+'<mark>');
+					iframe.value(iframe.value()+'<mark>');
 				}
 				if (i.checked()){
-					iframe.html(iframe.html()+'<i>');
+					iframe.value(iframe.value()+'<i>');
 				}
 				if (underline.checked()){
-					iframe.html(iframe.html()+'<u>');
+					iframe.value(iframe.value()+'<u>');
 				}
-				iframe.html(iframe.html()+tc.html());
+				iframe.value(iframe.value()+tc.html());
 				if (underline.checked()){
-					iframe.html(iframe.html()+'</u>');
+					iframe.value(iframe.value()+'</u>');
 				}
 				if (i.checked()){
-					iframe.html(iframe.html()+'</i>');
+					iframe.value(iframe.value()+'</i>');
 				}
 				if (mark.checked()){
-					iframe.html(iframe.html()+'</mark>');
+					iframe.value(iframe.value()+'</mark>');
 				}
 				if (smallbox.checked()){
-					iframe.html(iframe.html()+'</small>');
+					iframe.value(iframe.value()+'</small>');
 				}
 				if (supbox.checked()){
-					iframe.html(iframe.html()+'</sup>');
+					iframe.value(iframe.value()+'</sup>');
 				}
 				if (subbox.checked()){
-					iframe.html(iframe.html()+'</sub>');
+					iframe.value(iframe.value()+'</sub>');
 				}
 				if (strong.checked()){
-					iframe.html(iframe.html()+'</strong>');
+					iframe.value(iframe.value()+'</strong>');
 				}
-	iframe.html(iframe.html()+'</'+radio.value()+'>');
-        framef.html(iframe.html());
+	iframe.value(iframe.value()+'</'+radio.value()+'>');
+        framef.value(iframe.value());
 			}
 
