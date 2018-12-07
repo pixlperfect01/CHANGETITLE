@@ -7,7 +7,7 @@
     function setup(){
         noCanvas();
     }
-function draw(){
+function hi(){
     let edit = select("#editbox");
     let frame = select("#frame");
     frame.attribute('srcdoc',edit.value());
@@ -16,7 +16,7 @@ function draw(){
 
 </script>
 </head>
-
+    <button onclick="hi()">run</button>
     <textarea id="editbox"></textarea>
   <iframe width="700px" height="700px" srcdoc="" id="frame">
 
