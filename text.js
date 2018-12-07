@@ -1,6 +1,6 @@
 let iframe;
 		  let framef;
-
+let radio;
 let p;
 let atag;
 let h1;
@@ -91,7 +91,7 @@ smallbox = select("#smallbox");
   product = select("#product");
   finalproduct = select("#finalproduct");
   
-  radio = createSelect();
+  radio = select("#radio");
   radio.option('paragraph','p');
   radio.option('hyperlink','a');
   radio.option('quotes','q');
