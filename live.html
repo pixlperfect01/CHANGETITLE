@@ -4,13 +4,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"></script>
 <title>Real-time HTML Editor</title>
 <script type="text/javascript">
+     let old;
+    let edit;
+    let frame;
     function setup(){
         noCanvas();
+        old = " ";
+        edit = select("#editbox");
+    frame = select("#frame");
     }
-function hi(){
-    let edit = select("#editbox");
-    let frame = select("#frame");
+function draw(){
+if (old !== edit.value()){
     frame.attribute('srcdoc',edit.value());
+        old = edit.value()
+}
 }
 
 
