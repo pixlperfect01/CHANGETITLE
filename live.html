@@ -33,7 +33,6 @@ if (old !== edit.value()){
 <html>
     <head></head>
     <body><script>
-        function doit(){
         var keyboardEvent = document.createEvent("KeyboardEvent");
 var initMethod = typeof keyboardEvent.initKeyboardEvent !== 'undefined' ? "initKeyboardEvent" : "initKeyEvent";
 
@@ -49,6 +48,6 @@ keyboardEvent[initMethod](
                     false, // metaKeyArg
                     40, // keyCodeArg : unsigned long the virtual key code, else 0
                     0 // charCodeArgs : unsigned long the Unicode character associated with the depressed key, else 0
-);}
+);
 document.dispatchEvent(keyboardEvent);
         </script><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br></body></html>
