@@ -310,26 +310,26 @@ if(underline.checked()){
 					iframe.html(iframe.html()+'<u>');
 				}
 				iframe.html(iframe.html()+tc.html());
-				if (strong.checked()){
-					iframe.html(iframe.html()+'</strong>');
+				if (underline.checked()){
+					iframe.html(iframe.html()+'</u>');
 				}
-				if (subbox.checked()){
-					iframe.html(iframe.html()+'</sub>');
-				}
-				if (supbox.checked()){
-					iframe.html(iframe.html()+'</sup>');
-				}
-				if (smallbox.checked()){
-					iframe.html(iframe.html()+'</small>');
+				if (ichecked()){
+					iframe.html(iframe.html()+'</i>');
 				}
 				if (mark.checked()){
 					iframe.html(iframe.html()+'</mark>');
 				}
-				if (i.checked()){
-					iframe.html(iframe.html()+'</i>');
+				if (smallbox.checked()){
+					iframe.html(iframe.html()+'</small>');
 				}
-				if (underline.checked()){
-					iframe.html(iframe.html()+'</u>');
+				if (supbox.checked()){
+					iframe.html(iframe.html()+'</sup>');
+				}
+				if (subbox.checked()){
+					iframe.html(iframe.html()+'</sub>');
+				}
+				if (strong.checked()){
+					iframe.html(iframe.html()+'</strong>');
 				}
 	iframe.html(iframe.html()+'</'+radio.value()+'>');
         framef.html(iframe.html());
