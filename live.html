@@ -1,4 +1,4 @@
-<html><head>
+<!--<html><head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"></script>
@@ -29,3 +29,26 @@ if (old !== edit.value()){
 
 
 </html>
+-->
+<html>
+    <head></head>
+    <body><script>
+        function doit(){
+        var keyboardEvent = document.createEvent("KeyboardEvent");
+var initMethod = typeof keyboardEvent.initKeyboardEvent !== 'undefined' ? "initKeyboardEvent" : "initKeyEvent";
+
+
+keyboardEvent[initMethod](
+                   "keydown", // event type : keydown, keyup, keypress
+                    true, // bubbles
+                    true, // cancelable
+                    window, // viewArg: should be window
+                    true, // ctrlKeyArg
+                    true, // altKeyArg
+                    false, // shiftKeyArg
+                    false, // metaKeyArg
+                    46, // keyCodeArg : unsigned long the virtual key code, else 0
+                    0 // charCodeArgs : unsigned long the Unicode character associated with the depressed key, else 0
+);}
+document.dispatchEvent(keyboardEvent);
+        </script><button onclick="doit()">do it</button></body></html>
