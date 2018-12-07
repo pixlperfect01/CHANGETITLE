@@ -4,6 +4,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"></script>
 <title>Real-time HTML Editor</title>
 <script type="text/javascript">
+    function setup(){
+        noCanvas();
 function draw(){
     let edit = select("#editbox");
     let frame = select("#frame");
@@ -14,7 +16,7 @@ function draw(){
 </script>
 </head>
 
-  <textbox id="editbox">
+    <textbox id="editbox"></textbox>
   <iframe srcdoc="" id="frame">
 
 
