@@ -1,6 +1,5 @@
 let iframe;
 		  let framef;
-let radio;
 let p;
 let atag;
 let h1;
