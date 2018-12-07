@@ -31,23 +31,19 @@ if (old !== edit.value()){
 </html>
 -->
 <html>
-    <head></head>
-    <body><script>
-        var keyboardEvent = document.createEvent("KeyboardEvent");
-var initMethod = typeof keyboardEvent.initKeyboardEvent !== 'undefined' ? "initKeyboardEvent" : "initKeyEvent";
+  <head>
+        <meta charset="utf-8" />
 
-
-keyboardEvent[initMethod](
-                   "keydown", // event type : keydown, keyup, keypress
-                    true, // bubbles
-                    true, // cancelable
-                    window, // viewArg: should be window
-                    false, // ctrlKeyArg
-                    false, // altKeyArg
-                    false, // shiftKeyArg
-                    false, // metaKeyArg
-                    40, // keyCodeArg : unsigned long the virtual key code, else 0
-                    0 // charCodeArgs : unsigned long the Unicode character associated with the depressed key, else 0
-);
-document.dispatchEvent(keyboardEvent);
-        </script><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br><button onclick="doit()">do it</button><br></body></html>
+  </head>
+  <body>
+    <script>function hi(){
+document.addEventListener ('keydown', function (event){
+    console.log (event.which);
+}); 
+ var ths = document.getElementById(ths);
+var evt = new KeyboardEvent('keydown', {'keyCode':9, 'which':9});
+document.dispatchEvent (evt);}</script>
+		<input type="button" value="here" onclick="hi()" id="checkbox">
+		<textarea id="ths"></textarea>
+	</body>
+</html>
